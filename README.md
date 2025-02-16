@@ -69,5 +69,8 @@ edurl-backend/
 # Add Course {Note: only added by admin}
 4.POST -- Add Course           http://localhost:8000/api/admin/v1/add-course
 
+# View All Course
+4.GET -- View Course           http://localhost:8000/api/user/v1/get-course
+
 
 _(More API routes coming soon...)_  
