@@ -34,7 +34,7 @@ Ensure you have the following installed:
 3. **Set Up Environment Variables**  
    Create a `.env` file in the root directory and configure the following:  
    ```env
-   PORT = 5000  
+   PORT = 8000  
    DB_URL = your_mongodb_connection_string  
    SECRET_KEY = your_secret_key  
    ```  
