@@ -22,16 +22,17 @@ Ensure you have the following installed:
 
 ### 📥 Installation  
 
-1. **Clone the Repository**  
+1. **Clone the Repository**
+   ```
    git clone https://github.com/lucky3005/Edurl.git
-   cd Edurl
    ```  
 
-2. **Install Dependencies**  
+3. **Install Dependencies**  
+   ```
    npm install
    ```  
 
-3. **Set Up Environment Variables**  
+5. **Set Up Environment Variables**  
    Create a `.env` file in the root directory and configure the following:  
    ```env
    PORT = 8000  
@@ -39,7 +40,8 @@ Ensure you have the following installed:
    SECRET_KEY = your_secret_key  
    ```  
 
-4. **Start the Server**
+6. **Start the Server**
+   ```
    npm run dev
    ```  
    The server should be running on `http://localhost:8000/` 🚀  
@@ -84,7 +86,7 @@ edurl-backend/
 # Add Blog
 ```
 6.POST -- Add Blog             http://localhost:8000/api/admin/v1/add-blog
-7.GET -- View Blog             http://localhost:8000/api/user/v1/view-blog
+7.GET  -- View Blog            http://localhost:8000/api/user/v1/view-blog
 ```
 
 
