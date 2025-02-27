@@ -5,7 +5,7 @@ async function AddBlogPostController(req, res) {
         const { title, content, author } = req.body;
         if (!title || !content || !author) {
             return res.status(400).json({
-                msg: "Enter required fields"
+                msg: "Enter required fields title, content, author"
             });
         }
         const data = await BlogModel.create({
