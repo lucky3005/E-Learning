@@ -41,6 +41,10 @@ async function RegisterPostController(req, res) {
             return res.status(400).json({ msg: "Not Created" });
         }
 
+        const payLoad = {
+            id: user._id,
+        }
+
         return res.status(200).json({ msg: "User Created" });
     } catch (error) {
         return res.status(500).json({ msg: "Server Error" });
@@ -85,12 +89,13 @@ async function SignInPostController(req, res) {
 
         if (user && user._doc) {
             const { password, createdAt, updatedAt, address, __v, ...userWithoutPassword } = user._doc;
-
+             
             return res.status(200).json({
                 token: token,
                 msg: "Login Successfully!",
                 ...userWithoutPassword
             });
+           
         }
 
 
@@ -105,7 +110,9 @@ async function SignInPostController(req, res) {
 
 //Verification
 async function TokenVerificationPostController(req, res) {
-    const token = req.header("Token");
+    // const t1 = req.header("token");
+    const token = req.cookie["token"];
+    
     try {
         if (!token) {
             return res.json(false);

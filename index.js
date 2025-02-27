@@ -11,6 +11,7 @@ const DBConnection = require("./db_connection");
 const AuthRouter = require("./routes/auth_route");
 const AdminRouter = require("./routes/admin_route");
 const ViewCourseRouter = require("./routes/view_course_route");
+const BlogRouter = require("./routes/blog_route");
 
 //PORT
 const port = process.env.PORT || 4000
@@ -25,9 +26,8 @@ DBConnection(process.env.DB_URL);
 
 //API
 app.use("/",AuthRouter);
-app.use("/api/admin/v1",AdminRouter);
+app.use("/api/admin/v1",AdminRouter,BlogRouter);
 app.use("/api/user/v1",AuthRouter,ViewCourseRouter);
-// app.use("/api/user/v1",);
 
 app.listen(port,()=>{
     console.log("Server Started");    
