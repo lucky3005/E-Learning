@@ -62,25 +62,30 @@ edurl-backend/
 
 ### 🛠 API Routes  
 # Authentication
+```
 1.POST -- User Registration    http://localhost:8000/api/user/v1/register
 2.POST -- User Login           http://localhost:8000/api/user/v1/sign-in
 3.POST -- Token Verification   http://localhost:8000/api/user/v1/token
+```
 
 #
 # Add Course {Note: only added by admin}
 ```
 4.POST -- Add Course           http://localhost:8000/api/admin/v1/add-course
+```
 
 #
 # View All Course
 ```
 5.GET -- View Course           http://localhost:8000/api/user/v1/get-course
+```
 
 #
 # Add Blog
 ```
 6.POST -- Add Blog             http://localhost:8000/api/admin/v1/add-blog
 7.GET -- View Blog             http://localhost:8000/api/user/v1/view-blog
+```
 
 
 _(More API routes coming soon...)_  
