@@ -87,7 +87,7 @@ edurl-backend/
 # Add Blog
 ```
 6.POST -- Add Blog             http://localhost:8000/api/admin/v1/add-blog
-7.GET -- View Blog             http://localhost:8000/api/user/v1/view-blog
+7.GET  -- View Blog            http://localhost:8000/api/user/v1/view-blog
 ```
 
 
