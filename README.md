@@ -25,7 +25,6 @@ Ensure you have the following installed:
 1. **Clone the Repository**
    ```
    git clone https://github.com/lucky3005/Edurl.git
-   cd Edurl
    ```  
 
 3. **Install Dependencies**  
