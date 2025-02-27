@@ -68,14 +68,17 @@ edurl-backend/
 
 #
 # Add Course {Note: only added by admin}
+```
 4.POST -- Add Course           http://localhost:8000/api/admin/v1/add-course
 
 #
 # View All Course
+```
 5.GET -- View Course           http://localhost:8000/api/user/v1/get-course
 
 #
 # Add Blog
+```
 6.POST -- Add Blog             http://localhost:8000/api/admin/v1/add-blog
 7.GET -- View Blog             http://localhost:8000/api/user/v1/view-blog
 
