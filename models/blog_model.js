@@ -15,14 +15,7 @@ const blogSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-    updatedAt: {
-        type: Date,
-        default: Date.now
-    }
+   
 });
 
 const BlogModel = mongoose.model('Blog', blogSchema);
