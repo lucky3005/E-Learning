@@ -27,7 +27,7 @@ DBConnection(process.env.DB_URL);
 //API
 app.use("/",AuthRouter);
 app.use("/api/admin/v1",AdminRouter,BlogRouter);
-app.use("/api/user/v1",AuthRouter,ViewCourseRouter);
+app.use("/api/user/v1",AuthRouter,ViewCourseRouter,BlogRouter);
 
 app.listen(port,()=>{
     console.log("Server Started");    
