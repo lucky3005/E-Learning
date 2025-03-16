@@ -105,14 +105,12 @@ async function SignInPostController(req, res) {
             msg: error.message
         });
     }
-
+ 
 }
 
 //Verification
 async function TokenVerificationPostController(req, res) {
-    // const t1 = req.header("token");
-    const token = req.cookie["token"];
-    
+    const token = req.header("token");     
     try {
         if (!token) {
             return res.json(false);

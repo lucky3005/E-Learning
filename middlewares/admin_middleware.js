@@ -2,7 +2,7 @@ const Token = require("../helper/jwt_token");
 const UserModel = require("../models/auth_model");
 
 async function Admin(req, res, next) {
-    const token = req.header("Token");
+    const token = req.header("token");
     try {
         if (!token) {
             return res.status(401).json({

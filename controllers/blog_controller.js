@@ -21,7 +21,8 @@ async function AddBlogPostController(req, res) {
         }
 
         return res.status(200).json({
-            msg: "Blog added successfully!"
+            msg: "Blog added successfully!",
+            id: data._id
         });
 
     } catch (error) {
@@ -49,4 +50,27 @@ async function ViewBlogGetController(req, res) {
     }
 }
 
-module.exports = { AddBlogPostController, ViewBlogGetController };
+async function DeleteBlogController(req, res) {
+    const id = req.params.id;
+    try {
+        const isDeleted = await BlogModel.findByIdAndDelete(id);
+        console.log(id);
+
+        if (!isDeleted) {
+            return res.status(404).json({
+                msg: "No blog found"
+            });
+        }
+        return res.status(200).json({
+            msg: "Deleted",
+            data: isDeleted
+        });
+    } catch (error) {
+        return res.status(500).json({
+            msg: "Server Error",
+            error: e.message
+        });
+    }
+}
+
+module.exports = { AddBlogPostController, ViewBlogGetController, DeleteBlogController, };

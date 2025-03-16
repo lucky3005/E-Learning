@@ -62,18 +62,19 @@ edurl-backend/
 │── README.md             # Project documentation  
 ```  
 
-### 🛠 API Routes  
+### 🛠 API Routes   
 # Authentication
 ```
-1.POST -- User Registration    http://localhost:8000/api/user/v1/register
-2.POST -- User Login           http://localhost:8000/api/user/v1/sign-in
-3.POST -- Token Verification   http://localhost:8000/api/user/v1/token
+1.POST -- User Registration    http://localhost:8000/register
+2.POST -- User Login           http://localhost:8000/sign-in
+3.POST -- Token Verification   http://localhost:8000/token
 ```
 
 #
-# Add Course {Note: only added by admin}
+# Add Course {Note: only added and deleted by admin}
 ```
-4.POST -- Add Course           http://localhost:8000/api/admin/v1/add-course
+4.POST   -- Add Course              http://localhost:8000/admin/add-course
+5.DELETE -- Delete Course           http://localhost:8000/admin/delete/:id
 ```
 
 #
