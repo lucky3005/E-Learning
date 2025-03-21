@@ -55,8 +55,8 @@ edurl-backend/
 │   ├── models/           # Database schemas  
 │   ├── routes/           # API endpoints  
 │   ├── middlewares/      # Authentication & validation   
-│   ├── helper/            # Helper functions  
-│   ├── index.js         # Main entry point  
+│   ├── helper/           # Helper functions  
+│   ├── index.js          # Main entry point  
 │── .env                  # Environment variables  
 │── package.json          # Dependencies & scripts  
 │── README.md             # Project documentation  
@@ -80,14 +80,14 @@ edurl-backend/
 #
 # View All Course
 ```
-5.GET -- View Course           http://localhost:8000/user/v1/get-course
+5.GET -- View Course           http://localhost:8000/user/get-course
 ```
 
 #
 # Add Blog
 ```
-6.POST -- Add Blog             http://localhost:8000/admin/v1/add-blog
-7.GET  -- View Blog            http://localhost:8000/user/v1/view-blog
+6.POST -- Add Blog             http://localhost:8000/admin/add-blog
+7.GET  -- View Blog            http://localhost:8000/user/view-blog
 ```
 
 
