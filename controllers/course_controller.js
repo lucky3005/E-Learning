@@ -27,7 +27,7 @@ async function AddCoursePostController(req, res) {
 
         return res.status(200).json({
             msg: "Course added successfully!",
-            id:course._id
+            id: course._id
         });
 
     } catch (error) {
@@ -47,7 +47,7 @@ async function ViewCourseGetController(req, res) {
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
-} 
+}
 
 async function DeleteCourseController(req, res) {
     const id = req.params.id;

@@ -16,7 +16,7 @@ async function Admin(req, res, next) {
                 msg: "Token verification failed, access denied"
             });
         }
-        
+
         const isAdmin = await UserModel.findOne({ _id: isVerified.id, type: "admin" });
         if (!isAdmin) {
             return res.status(401).json({

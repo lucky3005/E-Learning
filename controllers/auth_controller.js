@@ -89,13 +89,13 @@ async function SignInPostController(req, res) {
 
         if (user && user._doc) {
             const { password, createdAt, updatedAt, address, __v, ...userWithoutPassword } = user._doc;
-             
+
             return res.status(200).json({
                 token: token,
                 msg: "Login Successfully!",
                 ...userWithoutPassword
             });
-           
+
         }
 
 
@@ -105,12 +105,12 @@ async function SignInPostController(req, res) {
             msg: error.message
         });
     }
- 
+
 }
 
 //Verification
 async function TokenVerificationPostController(req, res) {
-    const token = req.header("token");     
+    const token = req.header("token");
     try {
         if (!token) {
             return res.json(false);

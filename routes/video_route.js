@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, 'videos/original/'),
     filename: (req, file, cb) => cb(null, file.originalname)
 });
- 
+
 const upload = multer({ storage });
 
 router.post('/upload', upload.single('video'), videoController.uploadVideo);

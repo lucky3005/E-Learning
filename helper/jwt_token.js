@@ -6,7 +6,7 @@ function TokenGenerator(payLoad) {
 }
 
 function TokenVerification(token) {
-    return jwt.verify(token,process.env.SECRET_KEY);
+    return jwt.verify(token, process.env.SECRET_KEY);
 }
 
 module.exports = {
