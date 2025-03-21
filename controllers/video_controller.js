@@ -12,7 +12,7 @@ exports.uploadVideo = (req, res) => {
     if (!req.file) return res.status(400).send('No file uploaded');
 
     const inputVideoPath = path.join(originalDir, req.file.filename);
-    const outputVideoPath = path.join(compressedDir, req.file.filename.replace(/\.[^/.]+$/, '.mkv'));
+    const outputVideoPath = path.join(compressedDir, req.file.filename);
 
     exec(`ffmpeg -i "${inputVideoPath}" -c:v libx264 -preset ultrafast -crf 0 "${outputVideoPath}"`, (err) => {
         if (err) {
@@ -22,7 +22,7 @@ exports.uploadVideo = (req, res) => {
         return res.json({
             message: 'Video uploaded and compressed successfully',
             originalVideoUrl: `${req.protocol}://${req.get('host')}/video/stream/original/${req.file.filename}`,
-            compressedVideoUrl: `${req.protocol}://${req.get('host')}/video/stream/compressed/${req.file.filename.replace(/\.[^/.]+$/, '.mkv')}`
+            compressedVideoUrl: `${req.protocol}://${req.get('host')}/video/stream/compressed/${req.file.filename}`
         });
     });
 };
@@ -36,9 +36,9 @@ exports.streamOriginal = (req, res) => {
 };
 
 exports.streamCompressed = (req, res) => {
-    const filePath = path.join(compressedDir, req.params.filename.replace(/\.[^/.]+$/, '.mkv'));
+    const filePath = path.join(compressedDir, req.params.filename);
     if (!fs.existsSync(filePath)) return res.status(404).send('Compressed video not found');
 
-    res.setHeader('Content-Type', 'video/x-matroska');
+    res.setHeader('Content-Type', 'video/mp4');
     fs.createReadStream(filePath).pipe(res);
 };

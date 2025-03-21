@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();  
 
-//INITIALIZE PACKAGES 
+//INITIALIZE PACKAGES
 const app = express();
 
 //REQUIRED FILES
