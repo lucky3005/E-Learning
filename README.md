@@ -80,14 +80,14 @@ edurl-backend/
 #
 # View All Course
 ```
-5.GET -- View Course           http://localhost:8000/api/user/v1/get-course
+5.GET -- View Course           http://localhost:8000/user/v1/get-course
 ```
 
 #
 # Add Blog
 ```
-6.POST -- Add Blog             http://localhost:8000/api/admin/v1/add-blog
-7.GET  -- View Blog            http://localhost:8000/api/user/v1/view-blog
+6.POST -- Add Blog             http://localhost:8000/admin/v1/add-blog
+7.GET  -- View Blog            http://localhost:8000/user/v1/view-blog
 ```
 
 
